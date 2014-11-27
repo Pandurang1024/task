@@ -7,7 +7,7 @@ cp -r -f /var/chef1/code/jenkins_plugins/* .
 chown -R jenkins:jenkins *
 cd /var/lib/jenkins
 cp /var/chef1/code/credentials.xml .
-cp /var/chef1/org.jenkinsci.plugins.xvfb.XvfbBuildWrapper.xml .
+cp /var/chef1/code/org.jenkinsci.plugins.xvfb.XvfbBuildWrapper.xml .
 chown jenkins:jenkins credentials.xml
 chown jenkins:jenkins org.jenkinsci.plugins.xvfb.XvfbBuildWrapper.xml
 sudo service jenkins restart
