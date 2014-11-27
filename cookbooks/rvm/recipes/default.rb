@@ -22,12 +22,12 @@
 #command '\curl -sSL https://get.rvm.io | bash -s stable --ruby'
 #end
 
-cookbook_file "/opt/rvmgems.sh" do
-  source "rvmgems.sh"
-  mode "0677"
-end
+#cookbook_file "/opt/rvmgems.sh" do
+#  source "rvmgems.sh"
+#  mode "0677"
+#end
 
-bash "rvmgems" do
-  guard_interpreter :bash
-  code "/opt/rvmgems.sh"
-end
+#bash "rvmgems" do
+#  guard_interpreter :bash
+#  code "/opt/rvmgems.sh"
+#end
