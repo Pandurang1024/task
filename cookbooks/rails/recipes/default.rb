@@ -22,15 +22,3 @@ cwd '/opt'
 command '\curl -sSL https://get.rvm.io | bash -s stable --ruby'
 end
 
-
-rvm gemset use global
-
-cookbook_file "/opt/rvmgems.sh" do
-  source "rvmgems.sh"
-  mode "0677"
-end
-
-bash "rvmgems" do
-  guard_interpreter :bash
-  code "/opt/rvmgems.sh"
-end
