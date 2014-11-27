@@ -7,12 +7,13 @@
 # All rights reserved - Do Not Redistribute
 #
 
-#rvm get stable --autolibs=enable
-#rvm install ruby
-#rvm --default use ruby-2.1.5
+
+#package "rails" do
+#  version "4.1.0"
+#  action :install
+#end
 
 package "rails" do
-  version "4.1.0"
   action :install
 end
 
@@ -86,11 +87,6 @@ cookbook_file "/opt/startapp.sh" do
   mode "0677"
 end
 
-#bash "startapp" do
- # guard_interpreter :bash
- #code "opt/startapp.sh"
- #end
-#Start Rails Server
 execute 'startRailServer' do
   cwd '/var/chef/prime_factors_kata'
   command 'rails s -d'
