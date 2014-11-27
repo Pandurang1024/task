@@ -1,7 +1,7 @@
 
 #!/bin/bash
 source /usr/local/rvm/scripts/rvm
-rvm --default use ruby-2.1.5
+rvm use 1.9.3 --default
 #rvm gemset use global
 sudo gem install nokogiri
 sudo gem install cucumber
