@@ -1,5 +1,6 @@
 rvm --default use ruby-2.1.5
-rvm gemset use global
+#rvm gemset use global
+gem install nokogiri
 gem install cucumber
 gem install nokogiri
 gem install capybara

@@ -11,14 +11,7 @@
 #rvm install ruby
 #rvm --default use ruby-2.1.5
 
-execute 'rvmkey' do
-  cwd '/opt'
-  command 'gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3'
+package "rails" do
+  version "4.1.0"
+  action :install
 end
-
-
-execute 'rvmInstall' do
-cwd '/opt'
-command '\curl -sSL https://get.rvm.io | bash -s stable --ruby'
-end
-
