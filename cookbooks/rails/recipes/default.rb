@@ -52,15 +52,6 @@ end
 
 
 #Star pimefact rail server
-cookbook_file "/etc/init.d/primefact.sh" do
-  source "primefact.sh"
-  mode "0677"
-end
-
-cookbook_file "/opt/reqfiles.sh" do
-  source "reqfiles.sh"
-  mode "0677"
-end
 
 package "ruby-railties" do
   action :install
@@ -75,16 +66,9 @@ execute 'updatesqlite' do
   command 'bundle update sqlite3'
 end
 
-
-
 execute 'updatedb' do
   cwd '/var/chef/prime_factors_kata'
   command 'rake db:migrate'
-end
-
-cookbook_file "/opt/startapp.sh" do
-  source "startapp.sh"
-  mode "0677"
 end
 
 execute 'startRailServer' do
