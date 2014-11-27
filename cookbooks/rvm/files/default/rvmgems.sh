@@ -1,8 +1,11 @@
+
+#!/bin/bash
+source /usr/local/rvm/scripts/rvm
 rvm --default use ruby-2.1.5
 #rvm gemset use global
-gem install nokogiri
-gem install cucumber
-gem install nokogiri
-gem install capybara
-gem install rake
-gem install selenium-webdriver
+sudo gem install nokogiri
+sudo gem install cucumber
+sudo gem install nokogiri
+sudo gem install capybara
+sudo gem install rake
+sudo gem install selenium-webdriver

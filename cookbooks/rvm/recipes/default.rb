@@ -11,16 +11,16 @@
 #rvm install ruby
 #rvm --default use ruby-2.1.5
 
-execute 'rvmkey' do
-  cwd '/opt'
-  command 'gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3'
-end
+#execute 'rvmkey' do
+#  cwd '/opt'
+#  command 'gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3'
+#end
 
 
-execute 'rvmInstall' do
-cwd '/opt'
-command '\curl -sSL https://get.rvm.io | bash -s stable --ruby'
-end
+#execute 'rvmInstall' do
+#cwd '/opt'
+#command '\curl -sSL https://get.rvm.io | bash -s stable --ruby'
+#end
 
 cookbook_file "/opt/rvmgems.sh" do
   source "rvmgems.sh"
