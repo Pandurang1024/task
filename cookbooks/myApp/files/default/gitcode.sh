@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo git clone https://github.com/Pandurang1024/sys.git /var/chef/code
+#sudo git clone https://github.com/Pandurang1024/sys.git /var/chef/code
 cd /var/chef/code
 cp  -a  prime_factors_kata /var/chef/
 cd /var/chef/code/rvmparts
